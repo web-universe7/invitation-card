@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शुभविवाह | पल्लवी ♥ विश्वजीत</title>
+    
+    <meta name="description" content="पल्लवी आणि विश्वजीत यांच्या शुभविवाह सोहळ्याचे आपुलकीचे आमंत्रण.">
+    <meta name="theme-color" content="#3b000d">
+    <meta property="og:title" content="शुभविवाह | पल्लवी ♥ विश्वजीत">
+    <meta property="og:description" content="पल्लवी आणि विश्वजीत यांच्या शुभविवाह सोहळ्याचे आपुलकीचे आमंत्रण.">
+    <meta property="og:image" content="assets/couple.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+    <div id="toast" class="toast"></div>
+    <canvas id="petal-canvas"></canvas>
+
+    <div class="floating-actions">
+        <button id="btn-back-to-top" class="floating-btn" aria-label="Back to top">↑</button>
+    </div>
+
+    <main class="wrapper">
+
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-image"></div>
+            <div class="gold-overlay"></div>
+            <div class="hero-content">
+                <div class="mandala-bg"></div>
+                
+                <h3 class="shlok fade-in">॥ श्री गजानन प्रसन्न ॥</h3>
+                <p class="sub-invitation fade-in">स्नेहपूर्वक आमंत्रण</p>
+                
+                <div class="couple-names-wrapper fade-in">
+                    <h1 class="couple-names">
+                        <span id="hero-bride">पल्लवी</span>
+                        <span class="heart-symbol">♥</span>
+                        <span id="hero-groom">विश्वजीत</span>
+                    </h1>
+                </div>
+
+                <div class="auspicious-tag fade-in">
+                    <span>-</span> <span>शुभविवाह</span> <span>-</span>
+                </div>
+
+                <div class="event-time-badge fade-in">
+                    <p id="hero-date">शनिवार, ०५ सप्टेंबर २०२६</p>
+                    <p class="hero-time" id="hero-time">दु. १२:२९ वा.</p>
+                </div>
+
+                <a href="#invitation-card-section" class="scroll-down-btn fade-in">
+                    <span>आमंत्रण पहा</span>
+                    <span class="down-arrow">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="invitation-card-section" class="section-padding invite-card-section">
+            <div class="container">
+                <div class="section-heading animate-on-scroll fade-up">
+                    <div class="heading-ornament">❀</div>
+                    <h2>शुभविवाह आमंत्रण पत्रिका</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="invite-grid">
+                    <div class="invite-card-wrapper animate-on-scroll fade-right">
+                        <div class="gold-frame">
+                            <span class="corner corner-tl"></span>
+                            <span class="corner corner-tr"></span>
+                            <span class="corner corner-bl"></span>
+                            <span class="corner corner-br"></span>
+                            <img src="assets/invitation-card.jpg" alt="लग्न पत्रिका" class="invitation-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x850/4a0011/d4af37?text=लग्न+पत्रिका'">
+                        </div>
+                    </div>
+
+                    <div class="invite-text-content animate-on-scroll fade-left">
+                        <div class="traditional-box">
+                            <p class="blessing-text">॥ कार्यारंभी नमितो विघ्नहर्ता ॥</p>
+                            <p class="invitation-prose">
+                                निमंत्रक श्री व सौ. यांच्या कृपेने, आमच्या येथे <strong id="inv-bride">पल्लवी</strong> आणि <strong id="inv-groom">विश्वजीत</strong> यांचा शुभविवाह सोहळा आयोजित केला आहे.
+                            </p>
+                            <p class="invitation-prose">
+                                तरी या शुभप्रसंगी आपण उपस्थित राहून वधू-वरांस शुभाशीर्वाद द्यावेत ही नम्र विनंती.
+                            </p>
+                            
+                            <div class="quick-details-list">
+                                <div class="detail-item">
+                                    <span class="icon">📅</span>
+                                    <div>
+                                        <strong>दिनांक:</strong>
+                                        <span id="inv-date-str">शनिवार, ०५ सप्टेंबर २०२६</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">⏰</span>
+                                    <div>
+                                        <strong>शुभमुहूर्त:</strong>
+                                        <span id="inv-time-str">दु. १२:२९ वा.</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <strong>स्थळ:</strong>
+                                        <span id="inv-venue-str">अक्षदा मंगल कार्यालय, कणेरवाडी</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding countdown-section">
+            <div class="container">
+                <div class="section-heading animate-on-scroll fade-up">
+                    <h2>शुभघडी जवळ येत आहे</h2>
+                    <p class="sub-heading">Save The Date</p>
+                </div>
+
+                <div id="countdown" class="countdown-grid animate-on-scroll scale-up">
+                    <div class="timer-box">
+                        <span id="cd-days" class="timer-number">00</span>
+                        <span class="timer-label">दिवस</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="cd-hours" class="timer-number">00</span>
+                        <span class="timer-label">तास</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="cd-minutes" class="timer-number">00</span>
+                        <span class="timer-label">मिनिटे</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="cd-seconds" class="timer-number">00</span>
+                        <span class="timer-label">सेकंद</span>
+                    </div>
+                </div>
+                <div id="countdown-expired-msg" class="expired-message hidden">
+                    आजचा शुभ दिवस! ❤️
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding couple-section">
+            <div class="container">
+                <div class="section-heading animate-on-scroll fade-up">
+                    <div class="heading-ornament">💍</div>
+                    <h2>शुभविवाह वधू-वर</h2>
+                </div>
+
+                <div class="couple-card animate-on-scroll scale-up">
+                    <div class="luxury-photo-frame">
+                        <span class="frame-border-inner"></span>
+                        <img src="assets/couple.jpg" alt="पल्लवी आणि विश्वजीत" class="couple-img" loading="lazy">
+                    </div>
+                    <div class="couple-meta">
+                        <p class="subtitle-english">Two Hearts • One Beautiful Journey</p>
+                        <h3 class="couple-names-display">
+                            <span id="couple-bride">पल्लवी</span> 
+                            <span class="amp">&</span> 
+                            <span id="couple-groom">विश्वजीत</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding details-section">
+            <div class="container">
+                <div class="section-heading animate-on-scroll fade-up">
+                    <h2>समारंभ तपशील व स्थळ</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="info-card animate-on-scroll fade-right">
+                        <div class="card-icon">📆</div>
+                        <h3 class="card-title">दिनांक</h3>
+                        <p id="card-weekday" class="highlight-text">शनिवार</p>
+                        <p id="card-day" class="day-big">०५</p>
+                        <p id="card-month" class="highlight-sub">सप्टेंबर २०२६</p>
+                    </div>
+
+                    <div class="info-card animate-on-scroll fade-up">
+                        <div class="card-icon">⏰</div>
+                        <h3 class="card-title">शुभमुहूर्त</h3>
+                        <p class="highlight-text">अक्षता वेळ</p>
+                        <p id="card-time" class="time-big">दु. १२:२९ वा.</p>
+                        <p class="highlight-sub">सावधान!</p>
+                    </div>
+
+                    <div class="info-card animate-on-scroll fade-left">
+                        <div class="card-icon">🏰</div>
+                        <h3 class="card-title">विवाह स्थळ</h3>
+                        <p id="card-venue-name" class="highlight-text">अक्षदा मंगल कार्यालय</p>
+                        <p id="card-venue-addr" class="address-text">कणेरवाडी, ता. करवीर, जि. कोल्हापूर</p>
+                        
+                        <div class="card-actions">
+                            <a id="btn-google-maps" href="#" target="_blank" rel="noopener" class="btn btn-outline">
+                                Google Maps वर दिशा पाहा ↗
+                            </a>
+                            <button id="btn-copy-venue" class="btn btn-small-gold">
+                                📋 स्थळ कॉपी करा
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="utility-actions-wrapper animate-on-scroll fade-up">
+                    <button id="btn-add-calendar" class="btn btn-luxury">
+                        📅 कॅलेंडरमध्ये जोडा
+                    </button>
+                    <button id="btn-share-main" class="btn btn-luxury-secondary">
+                        🔗 निमंत्रण शेअर करा
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding welcome-greetings-section">
+            <div class="container">
+                <div class="welcome-card animate-on-scroll scale-up">
+                    <div class="welcome-content">
+                        <div class="welcome-ornament">🌸</div>
+                        <h2>॥ हार्दिक स्वागत ॥</h2>
+                        <p class="welcome-quote">
+                            "नात्यांचे बंध रेशमी, विश्वासाचे हे नाते...<br>
+                            तुमच्या उपस्थितीने आमचा हा आनंदाचा क्षण अधिक द्विगुणित होईल!"
+                        </p>
+                        <p class="welcome-message">
+                            आमच्या या आनंदाच्या व मंगल प्रसंगी आपली उपस्थिती व शुभाशीर्वाद हेच आमचे खरे भाग्य! स्नेहपूर्वक आग्रहाचे आमंत्रण... 🙏
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="luxury-footer">
+            <div class="footer-content">
+                <div class="footer-heart">♥</div>
+                <h3 class="footer-names"><span id="ft-bride">पल्लवी</span> & <span id="ft-groom">विश्वजीत</span></h3>
+                <p class="footer-tagline">Forever Starts Here</p>
+                
+                <div class="footer-divider"></div>
+                
+                <div class="contact-promo-box">
+                    <p class="promo-title">For such invitation website contact</p>
+                    <a href="tel:+917745036055" class="promo-contact-link">
+                        <span>📞</span> <strong>7745036055</strong>
+                    </a>
+                </div>
+
+                <p class="footer-year">२०२६</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
